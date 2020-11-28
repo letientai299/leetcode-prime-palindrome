@@ -9,14 +9,16 @@ Benchmark result
 ```
 Benchmark_primePalindrome/letientai299-12         	   20000	     95646 ns/op	    1008 B/op	      29 allocs/op
 Benchmark_primePalindrome/unknown-12              	    5000	    252136 ns/op	       0 B/op	       0 allocs/op
-Benchmark_primePalindrome/x_root_x-12             	     500	   2118324 ns/op	  524816 B/op	   36900 allocs/op
+Benchmark_primePalindrome/tjucoder-12             	     500	   2118324 ns/op	  524816 B/op	   36900 allocs/op
 ```
 
 - `unknown` guy's solution does zero allocation, and cool trick to generate
   palindrome with odds number of digits, but his solution need to check many
   more palindrome numbers than mine.
-- `x_root_x`'s solution works with `string`, thus require many more allocation
-  and also his palindrome generation is not effective.
+- `tjucoder`'s
+  [solution](https://leetcode.com/problems/prime-palindrome/discuss/803639/Go-0ms-solution)
+  works with `string`, thus require many more allocation and also his
+  palindrome generation is not effective.
 - Mine is currently the fastest thanks to: generate potental palindrome as list
   of `int` digits (so less allocation and conversion), filter out those
   palindrome that can't be prime.

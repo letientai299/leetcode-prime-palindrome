@@ -4,8 +4,7 @@ import (
 	"fmt"
 	"leetcode-prime-palindrome/letientai299"
 	"leetcode-prime-palindrome/unknown"
-	"leetcode-prime-palindrome/x_root_x"
-	"math/big"
+	"leetcode-prime-palindrome/tjucoder"
 	"testing"
 )
 
@@ -166,10 +165,9 @@ type solution struct {
 }
 
 func allSolutions() []solution {
-	big.NewInt(1).ProbablyPrime()
 	return []solution{
 		{name: "letientai299", fn: letientai299.PrimePalindrome},
 		{name: "unknown", fn: unknown.PrimePalindrome},
-		{name: "x_root_x", fn: x_root_x.PrimePalindrome},
+		{name: "tjucoder", fn: tjucoder.PrimePalindrome},
 	}
 }
